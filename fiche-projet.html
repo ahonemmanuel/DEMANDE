@@ -43,11 +43,14 @@
     /* Format A4 exact pour l'impression / export PDF */
     @page { size: A4; margin: 0; }
 
+    .a4-page {
+      width: 210mm;
+      height: 297mm;
+    }
+
     @media screen {
       body { background: #d9dce0; }
       .a4-page {
-        width: 210mm;
-        height: 297mm;
         margin: 10mm auto;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
       }
@@ -102,7 +105,7 @@
     </div>
 
     <!-- Corps -->
-    <div class="flex-1 px-[14mm] py-[7mm] flex flex-col justify-center gap-[7mm]">
+    <div class="flex-1 min-h-0 px-[14mm] py-[6mm] flex flex-col gap-[5mm]">
 
       <!-- Problème / Solution -->
       <div class="grid grid-cols-2 gap-[10mm]">
@@ -208,6 +211,13 @@
             <p class="text-[8.5pt] text-white leading-[1.35]">Développer des initiatives numériques communes.</p>
           </div>
         </div>
+      </div>
+
+      <!-- Photo de destination : occupe l'espace restant, aucune zone blanche à l'impression -->
+      <div class="flex-1 min-h-0 rounded-xl overflow-hidden relative">
+        <img src="images/Chateau-Viale1.jpg" alt="Château Viale, Kpalimé — Togo" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+        <p class="absolute bottom-[2.5mm] left-[4mm] text-white text-[8pt] font-semibold drop-shadow">Château Viale — Kpalimé, Togo</p>
       </div>
 
     </div>
