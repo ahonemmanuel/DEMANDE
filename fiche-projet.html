@@ -216,8 +216,27 @@
       <!-- Photo de destination : occupe l'espace restant, aucune zone blanche à l'impression -->
       <div class="flex-1 min-h-0 rounded-xl overflow-hidden relative">
         <img src="images/Chateau-Viale1.jpg" alt="Château Viale, Kpalimé — Togo" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent"></div>
         <p class="absolute bottom-[2.5mm] left-[4mm] text-white text-[8pt] font-semibold drop-shadow">Château Viale — Kpalimé, Togo</p>
+
+        <!-- Aperçu de la plateforme (web + mobile), en incrustation sur la photo -->
+        <div class="absolute bottom-[3mm] right-[4mm] flex items-end gap-[3mm]">
+          <div class="w-[44mm] shrink-0 drop-shadow-lg">
+            <div class="bg-[#0d1512] rounded-t-[1.2mm] p-[1mm]">
+              <div class="rounded-[0.8mm] overflow-hidden bg-white aspect-[16/10]">
+                <img src="images/image1.png" alt="Plateforme Afro Explorer AI — version web" class="w-full h-full object-cover object-top" />
+              </div>
+            </div>
+            <div class="h-[1mm] bg-gray-300 rounded-b-[1.2mm]"></div>
+          </div>
+          <div class="w-[14mm] shrink-0 drop-shadow-lg">
+            <div class="bg-[#0d1512] rounded-[1.8mm] p-[0.8mm]">
+              <div class="rounded-[1.2mm] overflow-hidden bg-white aspect-[9/16]">
+                <img src="images/image2.png" alt="Plateforme Afro Explorer AI — version mobile" class="w-full h-full object-cover object-top" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
