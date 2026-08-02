@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afro Explorer AI — Fiche de présentation</title>
+  <meta name="description" content="Fiche de présentation A4 — Afro Explorer AI, proposition de partenariat au Ministère du Tourisme." />
+
+  <!-- Google Fonts : Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN + config) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              green: "#123524",
+              greendark: "#0A2016",
+              greenlight: "#E9F0EB",
+              gold: "#C89B3C",
+              goldlight: "#F6EDD8",
+              cream: "#FAF7F1",
+              ink: "#15181B",
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <style>
+    /* Format A4 exact pour l'impression / export PDF */
+    @page { size: A4; margin: 0; }
+
+    @media screen {
+      body { background: #d9dce0; }
+      .a4-page {
+        width: 210mm;
+        height: 297mm;
+        margin: 10mm auto;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .no-print { display: none !important; }
+      .a4-page { margin: 0; box-shadow: none; }
+    }
+
+    /* Conserve les couleurs de fond à l'impression (désactivé par défaut par certains navigateurs) */
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  </style>
+</head>
+
+<body class="font-poppins text-brand-ink antialiased">
+
+  <!-- Barre d'action (non imprimée) -->
+  <div class="no-print fixed top-4 right-4 z-50">
+    <button onclick="window.print()" class="inline-flex items-center gap-2 bg-brand-green text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg hover:bg-brand-greendark transition-colors duration-300">
+      <i data-lucide="printer" class="w-4 h-4"></i>
+      Imprimer / Enregistrer en PDF
+    </button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- FICHE A4                                                      -->
+  <!-- ============================================================ -->
+  <main class="a4-page bg-white flex flex-col overflow-hidden">
+
+    <!-- Bandeau supérieur -->
+    <div class="bg-brand-green px-[14mm] py-[8mm] flex items-center justify-between gap-6 shrink-0">
+      <div class="flex items-center gap-4">
+        <img src="images/full-logo.png" alt="Afro Explorer AI" class="h-[9mm] object-contain brightness-0 invert" />
+        <div class="border-l border-white/25 pl-4">
+          <p class="text-white font-extrabold text-[13pt] leading-tight">Afro Explorer AI</p>
+          <p class="text-white/70 text-[8.5pt] leading-tight">L'Afrique réinventée par IA</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="text-right">
+          <p class="text-brand-gold text-[7.5pt] font-bold uppercase tracking-[0.14em] leading-tight">Note de présentation</p>
+          <p class="text-white/60 text-[7pt] leading-tight">Ministère du Tourisme</p>
+        </div>
+        <div class="bg-white rounded-lg p-[2mm] flex flex-col items-center gap-[1mm] shrink-0">
+          <img src="images/qr-code.png" alt="QR code vers la démo" class="w-[16mm] h-[16mm] object-contain" />
+          <p class="text-[6pt] font-bold text-center leading-none text-brand-ink">DÉMO</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corps -->
+    <div class="flex-1 px-[14mm] py-[7mm] flex flex-col justify-center gap-[7mm]">
+
+      <!-- Problème / Solution -->
+      <div class="grid grid-cols-2 gap-[10mm]">
+        <div>
+          <div class="flex items-center gap-2 mb-[2mm]">
+            <i data-lucide="search" class="w-[4mm] h-[4mm] text-brand-green"></i>
+            <h2 class="text-[10.5pt] font-extrabold uppercase tracking-wide">Le problème</h2>
+          </div>
+          <p class="text-[9pt] text-gray-600 leading-[1.5]">
+            Les voyageurs ont du mal à trouver en un seul endroit des informations fiables sur
+            les destinations, les hébergements, les guides, les activités et la culture en Afrique.
+          </p>
+        </div>
+        <div class="pl-[10mm] border-l border-gray-200">
+          <div class="flex items-center gap-2 mb-[2mm]">
+            <i data-lucide="lightbulb" class="w-[4mm] h-[4mm] text-brand-gold"></i>
+            <h2 class="text-[10.5pt] font-extrabold uppercase tracking-wide">Notre solution</h2>
+          </div>
+          <p class="text-[9pt] text-gray-600 leading-[1.5]">
+            Afro Explorer AI est une plateforme qui utilise l'intelligence artificielle pour aider
+            les voyageurs à découvrir, planifier et réserver leur voyage, tout en valorisant les
+            acteurs locaux.
+          </p>
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-200"></div>
+
+      <!-- Pourquoi le Togo -->
+      <div>
+        <div class="flex items-center gap-2 mb-[3mm]">
+          <i data-lucide="map-pin" class="w-[4mm] h-[4mm] text-brand-gold"></i>
+          <h2 class="text-[10.5pt] font-extrabold uppercase tracking-wide">Pourquoi le Togo ?</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-x-[8mm] gap-y-[2mm]">
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="check-circle-2" class="w-[3.5mm] h-[3.5mm] text-brand-green shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[9pt] text-gray-700 leading-[1.4]">Valorisation des sites touristiques.</p>
+          </div>
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="check-circle-2" class="w-[3.5mm] h-[3.5mm] text-brand-green shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[9pt] text-gray-700 leading-[1.4]">Mise en avant des guides et professionnels locaux.</p>
+          </div>
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="check-circle-2" class="w-[3.5mm] h-[3.5mm] text-brand-green shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[9pt] text-gray-700 leading-[1.4]">Meilleure visibilité internationale.</p>
+          </div>
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="check-circle-2" class="w-[3.5mm] h-[3.5mm] text-brand-green shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[9pt] text-gray-700 leading-[1.4]">Soutien à la transformation numérique du secteur touristique.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-px bg-gray-200"></div>
+
+      <!-- État d'avancement -->
+      <div>
+        <div class="flex items-center gap-2 mb-[3mm]">
+          <i data-lucide="trending-up" class="w-[4mm] h-[4mm] text-brand-gold"></i>
+          <h2 class="text-[10.5pt] font-extrabold uppercase tracking-wide">État d'avancement</h2>
+        </div>
+        <div class="grid grid-cols-4 gap-[4mm]">
+          <div class="flex items-center gap-[2mm] bg-brand-cream rounded-lg px-[3mm] py-[2.5mm]">
+            <i data-lucide="check-circle-2" class="w-[4mm] h-[4mm] text-brand-green shrink-0"></i>
+            <p class="text-[8pt] font-semibold leading-[1.25]">MVP fonctionnel</p>
+          </div>
+          <div class="flex items-center gap-[2mm] bg-brand-cream rounded-lg px-[3mm] py-[2.5mm]">
+            <i data-lucide="check-circle-2" class="w-[4mm] h-[4mm] text-brand-green shrink-0"></i>
+            <p class="text-[8pt] font-semibold leading-[1.25]">Premiers guides inscrits</p>
+          </div>
+          <div class="flex items-center gap-[2mm] bg-brand-cream rounded-lg px-[3mm] py-[2.5mm]">
+            <i data-lucide="check-circle-2" class="w-[4mm] h-[4mm] text-brand-green shrink-0"></i>
+            <p class="text-[8pt] font-semibold leading-[1.25]">Base de données touristique en développement</p>
+          </div>
+          <div class="flex items-center gap-[2mm] bg-brand-goldlight rounded-lg px-[3mm] py-[2.5mm]">
+            <i data-lucide="rocket" class="w-[4mm] h-[4mm] text-brand-gold shrink-0"></i>
+            <p class="text-[8pt] font-semibold leading-[1.25]">Préparation du lancement pilote</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notre demande (mise en avant) -->
+      <div class="bg-brand-green rounded-xl px-[8mm] py-[5mm]">
+        <div class="flex items-center gap-2 mb-[2mm]">
+          <i data-lucide="handshake" class="w-[4mm] h-[4mm] text-brand-gold"></i>
+          <h2 class="text-[10.5pt] font-extrabold uppercase tracking-wide text-white">Notre demande</h2>
+        </div>
+        <p class="text-[9pt] text-white/80 leading-[1.4] mb-[2.5mm]">
+          Nous souhaitons explorer un partenariat avec le Ministère pour :
+        </p>
+        <div class="grid grid-cols-3 gap-[6mm]">
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="arrow-right-circle" class="w-[3.5mm] h-[3.5mm] text-brand-gold shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[8.5pt] text-white leading-[1.35]">Promouvoir le tourisme togolais.</p>
+          </div>
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="arrow-right-circle" class="w-[3.5mm] h-[3.5mm] text-brand-gold shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[8.5pt] text-white leading-[1.35]">Faciliter l'accès aux informations touristiques officielles.</p>
+          </div>
+          <div class="flex items-start gap-[2mm]">
+            <i data-lucide="arrow-right-circle" class="w-[3.5mm] h-[3.5mm] text-brand-gold shrink-0 mt-[0.5mm]"></i>
+            <p class="text-[8.5pt] text-white leading-[1.35]">Développer des initiatives numériques communes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bandeau contact -->
+    <div class="bg-brand-greendark px-[14mm] py-[5mm] flex items-center justify-between gap-6 shrink-0">
+      <div>
+        <p class="text-white font-bold text-[10pt] leading-tight">Moussa Chiguer Abakar</p>
+        <p class="text-brand-gold text-[8pt] leading-tight mb-[1.5mm]">Fondateur — Afro Explorer AI</p>
+        <div class="flex items-center gap-[5mm] text-white/85 text-[8pt]">
+          <span class="flex items-center gap-[1.5mm]"><i data-lucide="mail" class="w-[3.2mm] h-[3.2mm]"></i>moussachiguer08@gmail.com</span>
+          <span class="flex items-center gap-[1.5mm]"><i data-lucide="phone" class="w-[3.2mm] h-[3.2mm]"></i>+235 62 08 11 62</span>
+          <span class="flex items-center gap-[1.5mm]"><i data-lucide="globe" class="w-[3.2mm] h-[3.2mm]"></i>ai-explora.vercel.app</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-[1.5mm] flex flex-col items-center gap-[1mm] shrink-0">
+        <img src="images/qr-code.png" alt="QR code vers la démonstration" class="w-[13mm] h-[13mm] object-contain" />
+        <p class="text-[5.5pt] font-bold text-center leading-none text-brand-ink">DÉMO</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
